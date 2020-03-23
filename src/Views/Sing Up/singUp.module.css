@@ -15,6 +15,6 @@
     margin-top: 30px;
 }
 
-.button {
-
+.error {
+    color: #ff0000;
 }

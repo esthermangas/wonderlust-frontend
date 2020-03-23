@@ -1,16 +1,18 @@
 import React from 'react';
 import './App.css';
 import { StylesProvider,ThemeProvider} from '@material-ui/core/styles';
-import SignUp from './Views/Sing Up';
+import {BrowserRouter} from 'react-router-dom';
 import Theme from './Theme';
-
+import Router from './Router';
 
 function App() {
   return (
     <ThemeProvider theme={Theme}>
       <div>
         <StylesProvider injectFirst>
-          <SignUp />
+          <BrowserRouter>
+            <Router />
+          </BrowserRouter>
         </StylesProvider>
       </div>
     </ThemeProvider>
