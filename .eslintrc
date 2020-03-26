@@ -8,13 +8,19 @@
   "extends": ["airbnb", "prettier"],
   "env": {
     "browser": true,
-    "jest": true
+    "jest": true,
+    "es6": true,
+    "node": true
   },
   "rules": {
-    "max-len": ["error", {"code": 100}],
+    "max-len": ["error", {"code": 200}],
     "prefer-promise-reject-errors": ["off"],
     "react/jsx-filename-extension": ["off"],
     "react/prop-types": ["warn"],
     "no-return-assign": ["off"]
-  }
+  },
+
+  "plugins": ["prettier",
+    "import",
+    "react"]
 }

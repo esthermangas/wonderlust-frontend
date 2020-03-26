@@ -1,6 +1,7 @@
 import React, { useState} from 'react';
 import {Typography, Container, TextField, Grid, Paper, Button } from '@material-ui/core';
-import { useHistory, } from 'react-router';
+import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 import styles from './singUp.module.css';
 
 
@@ -76,6 +77,16 @@ return (
         </form>
       </Paper>
     </Container>
+    <div>
+      <Grid alignContent="center" className={styles.gridLink}>
+        <Typography align="center">
+          Already registered? Go to 
+          {' '}
+          <Link to="/login">log in</Link>
+          .
+        </Typography>
+      </Grid>
+    </div>
   </Container>
   )
 
