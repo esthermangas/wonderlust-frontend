@@ -1,0 +1,14 @@
+.container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.title{
+    margin: 3%;
+}
+
+.actionButton{
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}

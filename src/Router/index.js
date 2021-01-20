@@ -1,10 +1,11 @@
 import React from 'react';
-import {Route, Switch, Redirect} from 'react-router-dom';
+import { Route, Switch, Redirect, useRouteMatch } from 'react-router-dom';
 import SignUp from '../Views/Sing Up';
-import Home from '../Views/Home';
+import AppBar from '../Components/appBar';
 import LogIn from '../Views/Log In';
 
-const PrivateRoute = ({ component, ...options }) => {
+
+export const PrivateRoute = ({ component, ...options }) => {
 
   const finalComponente = localStorage.jwt && localStorage.jwt !== 'undefined' ? component : LogIn;
   
@@ -15,13 +16,18 @@ const PrivateRoute = ({ component, ...options }) => {
   )
 };
 
-const Router = props => (
-  <Switch>
-    <Redirect exact from="/" to="/home" />
-    <PrivateRoute exact path="/home" component={Home} />
-    <Route exact path="/signup" component={SignUp} />
-    <Route exact path="/login" component={LogIn} />
-  </Switch>
-)
+const Router = props => {
+  const match = useRouteMatch();
+
+  return (
+    <Switch>
+      <Redirect exact from="/" to="/app/home" />
+      <Redirect exact from="/app" to='/app/home' />
+      <PrivateRoute path="/app" render={AppBar} />
+      <Route exact path="/signup" component={SignUp} />
+      <Route exact path="/login" component={LogIn} />
+    </Switch>
+  )
+};
 
 export default Router; 

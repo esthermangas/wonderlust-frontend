@@ -1,0 +1,29 @@
+.paper {
+    margin: auto;
+}
+
+.whereInput {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.paperContainer{
+    margin-top: 30px;
+}
+
+.button{
+    width: 60px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.button > button{
+    display: block;
+    margin: auto;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,3 +1,4 @@
 import Home from './home.view';
+import {contextWrapper} from './Context/home.context.provider';
 
-export default Home;
+export default contextWrapper(Home);

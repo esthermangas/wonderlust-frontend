@@ -1,0 +1,50 @@
+
+.drawer {
+    width: 100px;
+    flex-shrink: 0;
+}
+.drawerPaper {
+    width: 100px;
+    background-color: #009688;
+    display: flex;
+}
+.iconsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconsList > li:hover {
+    border-radius: 100px;
+    background-color: #005b4d;
+    color: white;
+    transition-duration: 0.5ms;
+}
+
+.iconsList > li {
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.root {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    background-color: #B8D5CF;
+}
